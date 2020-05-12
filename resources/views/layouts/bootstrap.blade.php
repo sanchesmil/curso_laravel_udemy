@@ -126,7 +126,11 @@
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Colocado no final do documento, para que as páginas sejam carregadas mais rapidamente -->
+
+    <script src="{{ asset('js/app.js') }}" type="text/javascript"></script>  <!-- busca o arquivo local que contém as dependências do bootstrap -->
+
+
     /*
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
@@ -143,7 +147,7 @@
     </script>
     */
 
-    <script src="{{ asset('js/app.js') }}" type="text/javascript"></script>
+    
        
   </body>
 </html>
