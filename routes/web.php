@@ -11,23 +11,23 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
+//resource = representa todas as rotas HTTP (index, store, create, etc) sem a necessidade de declará-los.
+// Para consultar as rotas no cmd: php artisan route:list
+Route::resource('clientes', 'ClienteController');  
 
 Route::get('produtos', function(){
     return view('outras.produtos');
 })->name('produtos');
 
-
 Route::get('departamentos', function(){
     return view('outras.departamentos');
 })->name('departamentos');
-
-Route::get('clientes', function(){
-    return view('clientes.index');
-})->name('clientes.index');
 
 Route::get('opcoes/{opcao?}', function($opcao = null){
     return view('outras.opcoes',compact('opcao'));

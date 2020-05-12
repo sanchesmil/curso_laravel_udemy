@@ -4,12 +4,26 @@
 
 @section('conteudo')
     <h3>Clientes</h3>
-    <a href="#">NOVO CLIENTE</a>
+    <a href="{{route('clientes.create')}}">NOVO CLIENTE</a>
     
-    <hr>  
-
     @if(isset($clientes))
 
+        <ul>
+            @foreach ($clientes as $c)
+                <li>{{$c['id']}} | {{$c['nome']}} | 
+                    <a href="{{route('clientes.edit', $c['id'])}}">Editar</a> |
+                    <a href="{{route('clientes.show', $c['id'])}}">Detalhes</a></li> 
+                    <form action="{{route('clientes.destroy', $c['id'])}}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <input type="submit" value="Excluir">
+                    </form>
+            @endforeach
+        
+        </ul>
+
+        <hr>  
+ 
         @for($i = 0; $i < 10; $i++)
             {{$i}},
         @endfor
