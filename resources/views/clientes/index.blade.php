@@ -39,13 +39,17 @@
         <!-- Foreach e a Variável $LOOP => permite obter dados da estrutura do Foreach -->
         @foreach($clientes as $c)
             <p>{{$c['nome']}} |
-                @if($loop->first)   <!-- Verifica se é o 1º elemento do array-->
+                @if($loop->first)   <!-- Verifica se é o 1º elemento do array -->
                     (primeiro) | 
                 @endif
-                @if($loop->last)   <!-- Verifica se é o último elemento do array-->
+                @if($loop->last)   <!-- Verifica se é o último elemento do array -->
                     (último) |
                 @endif
-
+                <!--
+                    'index'     => pega o índice do registro no array
+                    'iteration' => pega a posicao do registro no array
+                    'count'     => pega o número de registros do array
+                -->
                 (Índice: {{$loop->index}})  - {{$loop->iteration}} / {{$loop->count}} 
             </p>
         @endforeach
