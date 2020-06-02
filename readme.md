@@ -1,6 +1,6 @@
 # INSTALAÇÃO do BOOTSTRAP via CMD no LARAVEL
 
-## 1) Diferen�as entre os arquivos 'composer.json' e 'package.json'
+## 1) Diferenças entre os arquivos 'composer.json' e 'package.json'
 
    ### 1.1) "composer.json"
 
