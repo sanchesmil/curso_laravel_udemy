@@ -94,7 +94,7 @@
 ## 5) Sobre o comando 'resource'
 
 	Este comando permite criar a estrutura do controlador com todos os métodos HTTP úteis para a realização de CRUD (GET, POST, DESTROY, PUT, SHOW, STORE, CREATE, UPDATE).
-	Além disso, ele cria automaticamente em uma linha todas as rotas de acesso ao controlador no arquivo 'routes\web.php'.
+	Além disso, ele define em uma linha todas as rotas de acesso ao controlador no arquivo 'routes\web.php'.
 
 	Ex.: Criação do controlador de Clientes:
 
