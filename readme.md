@@ -89,6 +89,8 @@
    * produtos (n) x (1) marca         (a PK de marca é FK em produto)
    * produtos (n) x (n) departamentos (foi criada uma tabela de ligação)
 
+--------------------------------------------------
+
 ## 5) Sobre o comando 'resource'
 
 	Este comando permite criar a estrutura do controlador com todos os métodos HTTP úteis para a realização de CRUD (GET, POST, DESTROY, PUT, SHOW, STORE, CREATE, UPDATE).
