@@ -13,7 +13,12 @@
         <li>Roupas</li>
     </ul>
     
-    <!-- Chama o componente 'alerta' -->
+    <hr>
+
+    <h3>Uso de componentes:</h3>
+    
+    <p>Obs.: Os alertas abaixo estão sendo exibidos pelo componente 'alerta', criado especificamente para isso.</p>
+    
     <!-- Obs.: Para ser chamado dessa forma, esse componente foi registrado em 'AppServiveProvider -->
     @alerta(['titulo'=>'Erro Fatal','tipo'=>'info'])
         <p><strong>Erro inesperado</strong></p>

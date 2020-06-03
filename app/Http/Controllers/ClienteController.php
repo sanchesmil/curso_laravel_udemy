@@ -60,11 +60,12 @@ class ClienteController extends Controller
         $clientes = session('clientes');  // Recupera os clientes da sessão
 
         // Cria um novo cliente
-        $id = end($clientes)['id'] + 1; // Recupera o Id do último cliente e acrescenta 1 
-        $nome = $request->nome;
-        $dados = ["id" => $id, "nome" => $nome];
+        $id = end($clientes)['id'] + 1; // end() => Recupera o ID do último cliente e acrescenta 1 
+        $nome = $request->nome;  // Recupera o nome via request
+        
+        $cliente = ["id" => $id, "nome" => $nome]; // Cria um 'cliente'
 
-        $clientes[] = $dados; //Inclui o novo cliente no Array de Clientes
+        $clientes[] = $cliente; //Inclui o novo cliente no Array de Clientes
 
         session(['clientes' => $clientes]); // Atualiza a variável de sessão de clientes
 
@@ -80,7 +81,7 @@ class ClienteController extends Controller
     public function show($id)
     {
         $clientes = session('clientes');
-        $index = $this->getIndex($id, $clientes);
+        $index = $this->getIndex($id, $clientes);  // getIndex() = metodo criado p/ recuperar o Indice do Id procurado
         $cliente = $clientes[$index];
 
         return view('clientes.info', compact(['cliente']));

@@ -126,4 +126,47 @@
             </p>
         @endforeach
 
+    Obs.: Ver o arquivo 'clientes/index.blade.php'.
+
+--------------------------------------------------
+
+## 7) Uso de 'sessão'
+
+	Neste projeto, o CRUD de cliente foi feito na SESSÃO.
+
+	Os clientes foram armazenados em forma de array na sessão.
+
+	Foram usados métodos do php para manipulação de array.
+
+	Obs: Olhar a implementação em 'ClienteController'.
+
+--------------------------------------------------
+
+## 8) Criação de 'Componentes' visuais para uso no blade
+
+	Neste caso, um componente é uma estrutura html reutilizável em todas as páginas que estendem o blade.
+
+	* Criação do componente: 'view/components/alerta.blade.php'.
+
+		<div class="box {{$tipo}}">
+			<div class="title">{{$titulo}}</div>
+
+			<!-- Obs.: A variável '$slot' é criada automaticamente e traz TODO o conteúdo de quem chamou o componente--> 
+			<div class="msg">{{$slot}}</div> 
+		</div>
+
+	* Registro do componente:  'app\AppServiveProvider.php' no método 'boot'
+
+        public function boot()
+		{
+			Blade::component('components.alerta', 'alerta'); // "alerta" é um apelido e
+		}
+
+	* Uso do componente:  Página 'view/outras/departamentos.blade.php'.
+	
+		@alerta(['titulo'=>'Erro Fatal','tipo'=>'info'])
+			<p><strong>Erro inesperado</strong></p>
+			<p>Ocorreu um erro inesperado.</p>
+		@endalerta
+	
 --------------------------------------------------
