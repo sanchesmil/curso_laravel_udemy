@@ -100,7 +100,7 @@
 
 		cmd: php artisan make:controller ClienteControle --resource
 
-	Obs.1: Cria uma única linha no arquivo de rotas 'web':
+	Obs.1: Define em uma linha, no arquivo de rotas 'web', o acesso a todas as rotas do controlador:
 
 		Route::resource('clientes', 'ClienteController'); 
 	
