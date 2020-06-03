@@ -86,8 +86,8 @@
    Como exemplo de uso, foi criada uma página com itens de menu para 'Clientes','Produtos','Departamentos' e 'Opcoes';
 
    Relacionamentos:  
-   * produtos (n) x (1) marca         (a PK de marca é FK em produto)
-   * produtos (n) x (n) departamentos (foi criada uma tabela de ligação)
+   - produtos (n) x (1) marca         (a PK de marca é FK em produto)
+   - produtos (n) x (n) departamentos (foi criada uma tabela de ligação)
 
 --------------------------------------------------
 
@@ -106,10 +106,10 @@
 
 ## 6) Foreach e a Variável $LOOP 
 
-No laravel, o Foreach possui uma uma variável interna chamada '$LOOP'. 
-Ela permite obter dados da estrutura do Foreach:
+	No laravel, o Foreach possui uma uma variável interna chamada '$LOOP'. 
+	Ela permite obter dados da estrutura do Foreach:
 
-Ex.:    @foreach($clientes as $c)
+	Ex.:    @foreach($clientes as $c)
             ....
                 @if($loop->first)   <!-- Verifica se é o 1º elemento do array -->
                     (primeiro) | 
@@ -125,3 +125,5 @@ Ex.:    @foreach($clientes as $c)
                 (Índice: {{$loop->index}})  - {{$loop->iteration}} / {{$loop->count}} 
             </p>
         @endforeach
+
+--------------------------------------------------
