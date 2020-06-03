@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="col2">
-            @yield('conteudo')  <!--  Incorpora o título de quem exteder esse layout -->
+            @yield('conteudo')  <!--  Incorpora o título de quem esteder esse layout -->
         </div>
     </div>
 </body>

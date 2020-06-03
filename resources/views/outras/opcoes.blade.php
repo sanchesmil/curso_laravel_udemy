@@ -12,9 +12,7 @@
            <li><a class="warning {{request()->is('opcoes/1') ? 'selected' : '' }}" href="{{route('opcoes',1)}}">warning</a></li>
            <li><a class="info {{request()->is('opcoes/2') ? 'selected' : '' }}"    href="{{route('opcoes',2)}}">info</a></li>
            <li><a class="success {{request()->is('opcoes/3') ? 'selected' : '' }}" href="{{route('opcoes',3)}}">success</a></li>
-           
-           <li><a class="error {{request()->is('opcoes/4') ? 'selected' : '' }}"   
-                  href="{{route('opcoes',4)}}">error</a></li>
+           <li><a class="error {{request()->is('opcoes/4') ? 'selected' : '' }}"   href="{{route('opcoes',4)}}">error</a></li>
        </ul>
    </div>
 

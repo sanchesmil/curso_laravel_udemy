@@ -106,7 +106,7 @@
 	
 	Obs.2: 'resource' representa todas as rotas HTTP sem a necessidade de declará-las.
 
-   ##### Consultar as rotas criadas:
+   ##### 5.1) Consultar as rotas criadas:
 
 		cmd: php artisan route:list
 
@@ -170,7 +170,7 @@
 			Blade::component('components.alerta', 'alerta'); // "alerta" é um apelido e
 		}
 
-	* Uso do componente:  Página 'view/outras/departamentos.blade.php'.
+	* Uso do componente:  Páginas 'departamentos.blade.php' e 'outras.blade.php' dentro de 'views/outras':
 	
 		@alerta(['titulo'=>'Erro Fatal','tipo'=>'info'])
 			<p><strong>Erro inesperado</strong></p>
