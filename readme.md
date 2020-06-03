@@ -102,7 +102,7 @@
 
 	Obs.1: Define em uma linha, no arquivo de rotas 'web', o acesso a todas as rotas do controlador:
 
-		Route::resource('clientes', 'ClienteController'); 
+		Route::resource('clientes', 'ClienteControle'); 
 	
 	Obs.2: 'resource' representa todas as rotas HTTP sem a necessidade de declará-las.
 
