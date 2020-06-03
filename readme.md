@@ -167,7 +167,7 @@
 
         public function boot()
 		{
-			Blade::component('components.alerta', 'alerta'); // "alerta" é um apelido e
+			Blade::component('components.alerta', 'alerta'); // "alerta" é um apelido
 		}
 
 	* Uso do componente:  Páginas 'departamentos.blade.php' e 'outras.blade.php' dentro de 'views/outras':
