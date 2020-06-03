@@ -18,9 +18,9 @@ class AddBrandsToProducts extends Migration
             $table->foreign('brand_id')->references('id')->on('brands'); // Associa o campo 'brand_id' de 'products' ao campo 'id' de 'brands'
         
             // Obs.: Por convenção, no Laravel, o campo de chave estrangeira é 
-            // iniciado pelo nome singular da tabela que está sendo referenciada (
-            // (no singular) + '_id' => ex. 'brand_id' 
-            // No momento de fazer relacionamentos o Laravel já faz inferências com 
+            // iniciado pelo nome singular da tabela que está sendo referenciada
+            // nome_singular + '_id' => ex. 'brand_id' 
+            // No momento de fazer relacionamentos o Laravel já faz inferências
             // usando esse 'padrão' de nomenclatura.
         
         });
@@ -36,7 +36,7 @@ class AddBrandsToProducts extends Migration
         Schema::table('products', function (Blueprint $table) {
             // Obs.: A reversão deve ser feita na ordem contrária ao que foi feito no método 'up'
             $table->dropForeign(['brand_id']);  // 1º apaga a constrant (pode passar vários parâmetros por array)
-            $table->dropColumn('brand_id');     // 2º apaga o campo (se for somente 1 campo pode passar direto)
+            $table->dropColumn('brand_id');     // 2º apaga o campo (se for somente 1 campo pode passar direto como parâmetro)
         });
     }
 }

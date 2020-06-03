@@ -61,8 +61,6 @@
 
 ## 2) EXEMPLO de USO do BOOTSTRAP
 
-    Como exemplo de uso, foi criada uma página com itens de menu para 'Clientes','Produtos','Departamentos' e 'Opcoes';
-
 	1º - Criei o arquivo 'views/layouts/boostrap.blade.php' que servirá de 'layout'. 
 	
 	2º - Criei o arquivo 'outras/exemplo.blade.php' extendendo o template do bootstrap.
@@ -73,10 +71,55 @@
 
 ## 3) Utilizando Bootstrap 4 no Laravel 6
 
-    Para o Laravel Vers�o 6.0, � necess�rio instalar um pacote chamando laravel-ui:
+    Para o Laravel Versão 6.0, é necessário instalar um pacote chamando laravel-ui:
    
     Via cmd:
 
 	composer require laravel/ui
 	php artisan ui bootstrap
 	npm install && npm run dev
+
+--------------------------------------------------
+
+## 4) Sobre este projeto
+
+   Como exemplo de uso, foi criada uma página com itens de menu para 'Clientes','Produtos','Departamentos' e 'Opcoes';
+
+   Relacionamentos:  
+   * produtos (n) x (1) marca         (a PK de marca é FK em produto)
+   * produtos (n) x (n) departamentos (foi criada uma tabela de ligação)
+
+## 5) Sobre o comando 'resource'
+
+	Este comando permite criar a estrutura do controlador com todos os métodos HTTP úteis para a realização de CRUD (GET, POST, DESTROY, PUT, SHOW, STORE, CREATE, UPDATE).
+	Além disso, ele já cria automaticamente as rotas de acesso ao controlador no arquivo 'routes\web.php'.
+
+	Ex.: Criação do controlador de Clientes:
+	cmd: php artisan make:controller ClienteControle --resource
+
+	Consultar as rotas criadas:
+	cmd: php artisan route:list
+
+--------------------------------------------------
+
+## 6) Foreach e a Variável $LOOP 
+
+No laravel, o Foreach possui uma uma variável interna chamada '$LOOP'. 
+Ela permite obter dados da estrutura do Foreach:
+
+Ex.:    @foreach($clientes as $c)
+            ....
+                @if($loop->first)   <!-- Verifica se é o 1º elemento do array -->
+                    (primeiro) | 
+                @endif
+                @if($loop->last)   <!-- Verifica se é o último elemento do array -->
+                    (último) |
+                @endif
+                <!--
+                    'index'     => pega o índice do registro no array
+                    'iteration' => pega a posicao do registro no array
+                    'count'     => pega o número de registros do array
+                -->
+                (Índice: {{$loop->index}})  - {{$loop->iteration}} / {{$loop->count}} 
+            </p>
+        @endforeach

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/principal.css') }}">
     
-    <title>@yield('titulo')</title>  // Incorpora o título de quem exteder esse layout
-    
+    <title>@yield('titulo')</title>  <!-- Incorpora o título de quem exteder esse layout -->
+
 </head>
 <body>
     <div class="row">
@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="col2">
-            @yield('conteudo')  <!--  Incorpora o título de quem exteder esse layout  -->
+            @yield('conteudo')  <!--  Incorpora o título de quem exteder esse layout -->
         </div>
     </div>
 </body>

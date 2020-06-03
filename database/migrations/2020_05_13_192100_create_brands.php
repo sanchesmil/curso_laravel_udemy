@@ -16,6 +16,7 @@ class CreateBrands extends Migration
         Schema::create('brands', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->softDeletes();  // Cria o campo 'deleted_at' que permite 'finalizar' o registro sem apagar do banco
             $table->timestamps();
         });
     }

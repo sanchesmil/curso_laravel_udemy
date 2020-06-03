@@ -13,6 +13,8 @@ class CreateProductDepartment extends Migration
      */
     public function up()
     {
+
+        // Relacionamento n x n
         Schema::create('product_department', function (Blueprint $table) {
             $table->unsignedBigInteger('product_id');
             $table->unsignedBigInteger('department_id');
