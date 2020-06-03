@@ -94,13 +94,21 @@
 ## 5) Sobre o comando 'resource'
 
 	Este comando permite criar a estrutura do controlador com todos os métodos HTTP úteis para a realização de CRUD (GET, POST, DESTROY, PUT, SHOW, STORE, CREATE, UPDATE).
-	Além disso, ele já cria automaticamente as rotas de acesso ao controlador no arquivo 'routes\web.php'.
+	Além disso, ele cria automaticamente em uma linha todas as rotas de acesso ao controlador no arquivo 'routes\web.php'.
 
 	Ex.: Criação do controlador de Clientes:
-	cmd: php artisan make:controller ClienteControle --resource
 
-	Consultar as rotas criadas:
-	cmd: php artisan route:list
+		cmd: php artisan make:controller ClienteControle --resource
+
+	Obs.1: Cria uma única linha no arquivo de rotas 'web':
+
+		Route::resource('clientes', 'ClienteController'); 
+	
+	Obs.2: 'resource' representa todas as rotas HTTP sem a necessidade de declará-las.
+
+   ##### Consultar as rotas criadas:
+
+		cmd: php artisan route:list
 
 --------------------------------------------------
 
