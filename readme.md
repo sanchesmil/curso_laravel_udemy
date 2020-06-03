@@ -4,24 +4,24 @@
 
    ### 1.1) "composer.json"
 
-        O arquivo 'composer.json' instala as depend�ncias PHP 'b�sicas' do Laravel.
+    O arquivo 'composer.json' instala as dependências PHP 'básicas' do Laravel.
 
 	Exemplo de bibliotecas: 
 	- laravel/framework
 	- laravel/finker
 	- laravel/proxy
 
-	Instala��o via cmd: composer update
+	Instalação via cmd: composer update
 
-	Local de instala��o: pasta 'VENDOR'
+	Local: pasta 'VENDOR'
 
 	--------------------------------------------------
 
    ### 1.2)	"package.json"
 
-	O arquivo 'package.json' instala as depend�ncias JAVASCRIPT para estiliza��o do Front-End do Laravel.
+	O arquivo 'package.json' instala as dependências JAVASCRIPT para estilização do Front-End do Laravel.
 
-	Esse arquivo cont�m bibliotecas de Front-end que podem ser usadas no projeto. 
+	Esse arquivo contém bibliotecas de Front-end que podem ser usadas no projeto. 
 
 	Exemplo de bibliotecas: 
 	- Bootstrap
@@ -29,39 +29,39 @@
 	- vue
 	- axios
 
-	Instala��o via cmd: php artisan preset <nome_da_biblioteca>
+	Instalação via cmd: php artisan preset <nome_da_biblioteca>
 
 	Obs.: O comando 'preset' seleciona a biblioteca de front-end que desejo usar no meu projeto.
 
-	Local de Instala��o: pasta 'NODE_MODULES' (nova pasta criada automaticamente)
+	Local: pasta 'NODE_MODULES' (nova pasta criada automaticamente)
 
 
-   #### 1.2.1) INSTALA��O da Biblioteca BOOTSTRAP
+   #### 1.2.1) INSTALAÇÃO da Biblioteca BOOTSTRAP
      
-    	1� cmd: php artisan preset bootstrap  (Seleciona a biblioteca 'Boostrap')
-	
-    	2� cmd: npm install    (Obs.: Antes de executar o 3� passo, ler o t�pico 'DESABILITAR o Vue.js do Projeto')
+    1º cmd: php artisan preset bootstrap  (Seleciona a biblioteca 'Boostrap')
 
-    	3� cmd: npm run dev   (atualiza os arquivos 'css/app.js' e 'js/app.css' na pasta 'public' com as depend�ncias do bootstrap)
+    2º cmd: npm install    (Obs.: Antes de executar o 3º passo, ler o tópico 'DESABILITAR o Vue.js do Projeto')
+
+    3º cmd: npm run dev    (atualiza os arquivos 'css/app.js' e 'js/app.css' na pasta 'public' com as dependências do bootstrap)
 
 
    #### 1.2.2) DESABILITAR o Vue.js do projeto:
 	
-   	Por padr�o, o Laravel traz o Vue.js habilitado. 
-    	Todavia, para usar outra biblioteca de Front-End, como o Bootstrap 
-    	� necess�rio desabilitar o Vue, caso contr�rio ficar� dando erro
-    	no Browser (F12 = aba Console).
+   	Por padrão, o Laravel traz o Vue.js habilitado. 
 
-    	Desabilitando o Vue:
-	
-    	1� Comentar todos os c�digos que fazem ref�ncia ao Vue no arquivo 'js/app.js' da pasta 'RESOURCES'
-    	2� Rodar o cmd: npm run dev (ele vai atualizar os arquivos 'css/app.js' e 'js/app.css' na pasta 'PUBLIC' sem as depend�ncias do Vue.js)
+    Todavia, para usar outra biblioteca de Front-End, como o Bootstrap é necessário
+    desabilitar o Vue, caso contrário ficará dando erro no Browser (F12 = aba Console).
+
+    Desabilitando o Vue:
+
+    1º Comentar ou excluir todos os códigos que fazem refência ao Vue no arquivo 'js/app.js' da pasta 'RESOURCES'
+    2º Rodar o cmd: npm run dev (ele vai atualizar os arquivos 'css/app.js' e 'js/app.css' na pasta 'PUBLIC' sem as dependências do Vue.js)
     
 --------------------------------------------------
 
 ## 2) EXEMPLO de USO do BOOTSTRAP
 
-    Como exemplo de uso, foi criado uma página com menus e preços de itens;
+    Como exemplo de uso, foi criada uma página com itens de menu para 'Clientes','Produtos','Departamentos' e 'Opcoes';
 
 	1º - Criei o arquivo 'views/layouts/boostrap.blade.php' que servirá de 'layout'. 
 	
